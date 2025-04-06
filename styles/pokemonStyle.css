@@ -1,0 +1,17 @@
+section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+section#pagination a{
+    background-color: var(--main-object-color);
+    border: 2px solid black;
+    padding: 10px;
+    border-radius: 10px;
+    display: inline-block;
+}
+section#pagination a:hover{
+    background-color: var(--secondary-object-color);
+}

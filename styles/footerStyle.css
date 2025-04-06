@@ -1,0 +1,14 @@
+footer#pageFooter
+{
+    background-color: var(--main-object-color);
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    font-size: 2rem;
+    
+}
+footer#pageFooter nav ul li a
+{
+    padding: 10px;
+}
