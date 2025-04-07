@@ -21,6 +21,18 @@
 
             <section id="pokemonCardContainer"></section>
             <!-- <button id="nextButton">Next</button> -->
+            <section id="pagination">
+                <div id="previous">
+                    <a>
+                        Previous Pokémon
+                    </a>
+                </div>
+                <div id="next">
+                    <a>
+                        Next Pokémon
+                    </a>
+                </div>
+            </section>
         </main>
     </div>
     

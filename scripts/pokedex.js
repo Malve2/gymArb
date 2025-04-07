@@ -121,24 +121,38 @@ function renderPokemonCards(allPokemonDetails) {
     link.appendChild(img);
     card.appendChild(link);
     body.appendChild(card);
-    hidePokemons(1, 20);
   });
+  hidePokemons(1, 20);
 }
 
 function hidePokemons(page, pokemonPerPage)
 {
-  let pokemons = document.getElementsByClassName();
+  let pokemons = document.getElementsByClassName("pokemon");
 
-  pokemons.forEach((pokemon, index) =>{
-    if(index * page < pokemonPerPage * page)
+  Array.from(pokemons).forEach((pokemon, index) =>{
+    console.log(pokemon);
+    if(index * page > pokemonPerPage * page - 1)
     {
       pokemon.style.display = "none";
     }
-
+    else
+    {
+      pokemon.style.display = "flex";
+    }
   })
-
-  
 }
+
+
+
+// Gör paginationen bra!!! /////////////////////////////////////////////////////////
+let nextStep = document.getElementById("next");
+let previousStep = document.getElementById("previous");
+
+nextStep, previousStep.addEventListener("click", function()
+{
+
+});
+
 
 
 function capitalizeFirstLetter(val) {
