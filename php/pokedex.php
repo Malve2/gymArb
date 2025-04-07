@@ -23,12 +23,12 @@
             <!-- <button id="nextButton">Next</button> -->
             <section id="pagination">
                 <div id="previous">
-                    <a>
+                    <a href="#">
                         Previous Pokémon
                     </a>
                 </div>
                 <div id="next">
-                    <a>
+                    <a href="#">
                         Next Pokémon
                     </a>
                 </div>

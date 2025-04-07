@@ -1,3 +1,8 @@
+// const queryString = window.location.search;
+// const urlParams = new URLSearchParams(queryString);
+// const page = Number(urlParams.get('page'));
+
+let page = 1;
 
 const MAX_POKEMON = 1304;
 const POKEMON_PER_REQUEST = 20;
@@ -122,7 +127,7 @@ function renderPokemonCards(allPokemonDetails) {
     card.appendChild(link);
     body.appendChild(card);
   });
-  hidePokemons(1, 20);
+  hidePokemons(page, 20);
 }
 
 function hidePokemons(page, pokemonPerPage)
@@ -130,7 +135,6 @@ function hidePokemons(page, pokemonPerPage)
   let pokemons = document.getElementsByClassName("pokemon");
 
   Array.from(pokemons).forEach((pokemon, index) =>{
-    console.log(pokemon);
     if(index * page > pokemonPerPage * page - 1)
     {
       pokemon.style.display = "none";
@@ -139,18 +143,33 @@ function hidePokemons(page, pokemonPerPage)
     {
       pokemon.style.display = "flex";
     }
+    console.log(page);
   })
 }
 
 
 
 // Gör paginationen bra!!! /////////////////////////////////////////////////////////
-let nextStep = document.getElementById("next");
-let previousStep = document.getElementById("previous");
+let previousPokemonLink = document.querySelector("div#previous a");
+// previousPokemonLink.href = `pokedex.php?page=${page-1}`;
+previousPokemonLink.addEventListener("click", function(
+){
 
-nextStep, previousStep.addEventListener("click", function()
-{
+  if(page != 1)
+  {
+    page = page - 1;
+    hidePokemons(page, 20);
+  }
+});
 
+let nextPokemonLink = document.querySelector("div#next a");
+// nextPokemonLink.href = `pokedex.php?page=${page+1}`;
+nextPokemonLink.addEventListener("click", function(
+){
+
+  console.log("HEJHEJ");
+  page = page + 1;
+  hidePokemons(page, 20);
 });
 
 
