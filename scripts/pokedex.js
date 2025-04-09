@@ -135,7 +135,7 @@ function hidePokemons(page, pokemonPerPage)
   let pokemons = document.getElementsByClassName("pokemon");
 
   Array.from(pokemons).forEach((pokemon, index) =>{
-    if(index * page > pokemonPerPage * page - 1)
+    if(index > pokemonPerPage * page - 1)
     {
       pokemon.style.display = "none";
     }
@@ -150,24 +150,10 @@ function hidePokemons(page, pokemonPerPage)
 
 
 // Gör paginationen bra!!! /////////////////////////////////////////////////////////
-let previousPokemonLink = document.querySelector("div#previous a");
-// previousPokemonLink.href = `pokedex.php?page=${page-1}`;
-previousPokemonLink.addEventListener("click", function(
+ 
+let loadMoreButton = document.querySelector("div#next a");
+loadMoreButton.addEventListener("click", function(
 ){
-
-  if(page != 1)
-  {
-    page = page - 1;
-    hidePokemons(page, 20);
-  }
-});
-
-let nextPokemonLink = document.querySelector("div#next a");
-// nextPokemonLink.href = `pokedex.php?page=${page+1}`;
-nextPokemonLink.addEventListener("click", function(
-){
-
-  console.log("HEJHEJ");
   page = page + 1;
   hidePokemons(page, 20);
 });
