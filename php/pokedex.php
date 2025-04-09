@@ -22,11 +22,15 @@
             <section id="pokemonCardContainer"></section>
             <!-- <button id="nextButton">Next</button> -->
             <section id="pagination">
-                <div id="next">
-                    <a>
-                        Next Pokémon
-                    </a>
-                </div>
+                <a id="loadMore">
+                    Load more pokémon
+                </a>
+                <select name="pokemonPerLoad" id="pokemonPerLoad" value="20">
+                    <option value="20">20</option>
+                    <option value="40">40</option>
+                    <option value="60">60</option>
+                    <option value="100">100</option>
+                </select>
             </section>
         </main>
     </div>

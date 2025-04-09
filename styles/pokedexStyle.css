@@ -2,6 +2,7 @@ main
 {
     display: flex;
     flex-direction: column;
+    align-items: center;
     gap: 2vh;
     background-color: var(--secondary-bg-color);
     padding-top: 50px;
@@ -25,6 +26,7 @@ section#pokemonCardContainer
     display: flex;
     flex-direction: column;
     align-items: center;
+    width: 100%;
 }
 article.pokemon a
 {
@@ -72,6 +74,28 @@ article.pokemon a > header
     margin-bottom: 2vh;
     color: var(--main-link-color);
 }
+section#pagination
+{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+}
+section#pagination > *
+{
+    background-color: var(--main-object-color);
+    border-radius: 10px;
+    padding: 10px;
+    border: solid black 1px;
+    color: var(--main-link-color);
+    font-family: pixel-regular;
+}
+section#pagination a#loadMore:hover
+{
+    cursor: pointer;
+    background-color: var(--secondary-object-color);
+}
+
 
 @media screen and (min-width: 1024px)
 {

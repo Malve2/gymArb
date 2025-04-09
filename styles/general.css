@@ -10,6 +10,8 @@ a
     text-decoration: none;
     color: var(--main-link-color);
     width: fit-content;
+    font-family: pixel-regular;
+    
 }
 body
 {
@@ -21,6 +23,8 @@ body
     padding: 0;
     scroll-behavior: smooth;
     background-color: var(--main-bg-color);
+    background-image: url("../images/every-pokemon.jpg");
+    
 }
 main
 {

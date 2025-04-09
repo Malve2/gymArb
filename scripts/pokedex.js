@@ -3,6 +3,7 @@
 // const page = Number(urlParams.get('page'));
 
 let page = 1;
+let pokemonPerLoad = document.getElementById("pokemonPerLoad");
 
 const MAX_POKEMON = 1304;
 const POKEMON_PER_REQUEST = 20;
@@ -127,15 +128,15 @@ function renderPokemonCards(allPokemonDetails) {
     card.appendChild(link);
     body.appendChild(card);
   });
-  hidePokemons(page, 20);
+  hidePokemons(page, pokemonPerLoad.value);
 }
 
-function hidePokemons(page, pokemonPerPage)
+function hidePokemons(page, pokemonPerLoad)
 {
   let pokemons = document.getElementsByClassName("pokemon");
-
+  
   Array.from(pokemons).forEach((pokemon, index) =>{
-    if(index > pokemonPerPage * page - 1)
+    if(index > pokemonPerLoad * page - 1)
     {
       pokemon.style.display = "none";
     }
@@ -143,20 +144,26 @@ function hidePokemons(page, pokemonPerPage)
     {
       pokemon.style.display = "flex";
     }
-    console.log(page);
+    
   })
+  console.log(pokemonPerLoad);
+    console.log(page);
 }
 
 
 
 // Gör paginationen bra!!! /////////////////////////////////////////////////////////
  
-let loadMoreButton = document.querySelector("div#next a");
+let loadMoreButton = document.querySelector("a#loadMore");
 loadMoreButton.addEventListener("click", function(
 ){
   page = page + 1;
-  hidePokemons(page, 20);
+
+  hidePokemons(page, pokemonPerLoad.value);
 });
+
+
+
 
 
 
