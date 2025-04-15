@@ -3,6 +3,11 @@ const urlParams = new URLSearchParams(queryString);
 const id = urlParams.get('id');
 
 apiUrl = "https://pokeapi.co/api/v2/pokemon/" + id;
+
+for(let i = -1; i < 2; i++)
+{
+    fetchPokemonData(apiUrl + (id + i));
+}
 fetch(apiUrl,{
     
     method:'GET',
@@ -20,21 +25,26 @@ function renderPokemon(pokemon)
 {
     const name = capitalizeFirstLetter(pokemon.name);
     const id = pokemon.id;
-    console.log(pokemon);
-    body = document.querySelector("body#body main");
-    image = document.createElement("img");
-    image.src = pokemon["sprites"]["other"]["official-artwork"]["front_default"];
+    const profileImage = document.getElementById("profile");
+    profileImage.src = pokemon["sprites"]["other"]["official-artwork"]["front_default"];
+    profileImage.alt = "Picture of the pokémon " + name;
     document.title = name + "!";
+
+
+
     //Stoppa in länkar till föregående och nästa pokemon, samt deras namn
+    
     let previousPokemonLink = document.querySelector("div#previous a");
     previousPokemonLink.href = `pokemon.php?id=${id-1}`;
 
     let nextPokemonLink = document.querySelector("div#next a");
     nextPokemonLink.href = `pokemon.php?id=${id+1}`;
 
-    body.appendChild(image);
+    if(id === 1)
+    {
+        previousPokemonLink.remove();        
+    }
 }
-
 
 function capitalizeFirstLetter(val) 
 {
@@ -42,7 +52,40 @@ function capitalizeFirstLetter(val)
 }
 
 
+async function fetchPokemonData(apiUrl) {
+    try {
+      const response = await fetch(apiUrl);
+  
+      if (!response.ok) {
+        throw new Error("Could not fetch resource");
+      }
 
+      const data = await response.json();
+      
+      // Fetch individual Pokémon details for each result
+      //console.log(data);
+      const pokemonPromises = data.results.map(async (pokemon) => {
+  
+        const pokemonData = await fetch(pokemon.url); // Fetch individual Pokémon details
+        const pokemonDetails = await pokemonData.json();
+        
+        return pokemonDetails; // Return the Pokémon details including id and sprite
+      });
+  
+      // Wait for all Pokémon data to be fetched
+      const allPokemonDetails = await Promise.all(pokemonPromises);
+      
+      // Sort the Pokémon details by their id (number)
+      allPokemonDetails.sort((a, b) => a.id - b.id);
+      //console.log(allPokemonDetails);
+  
+
+  
+    }
+    catch (error) {
+      console.error(error);
+    }
+  }
 
 
 

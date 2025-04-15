@@ -18,6 +18,20 @@ require_once("header.php");
             Home
         </h1>
     </section>
+    <section>
+        <article>
+            <h2>kajwh</h2>
+        </article>
+        <article>
+            <h2>kajwh</h2>
+        </article>
+        <article>
+            <h2>kajwh</h2>
+        </article>
+        <article>
+            <h2>kajwh</h2>
+        </article>
+    </section>
 </main>
 </div>
 

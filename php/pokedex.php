@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pokédex</title>
-    <link rel="icon" type="image/svg" href="../images/Poké_Ball_icon.svg">
     <link rel="stylesheet" href="../styles/pokedexStyle.css">
     <script src="../scripts/pokedex.js" defer></script>
 </head>

@@ -26,8 +26,19 @@
                     </a>
                 </div>
             </section>
-            <section>
-                
+            <section id="details">
+                <section>
+                    <img id="profile" src="" alt="">
+                </section>
+                <section>
+                    
+                </section>
+            </section>
+            <section id="evolutions">
+
+            </section>
+            <section id="">
+
             </section>
 
         </main>

@@ -6,6 +6,7 @@ footer#pageFooter
     justify-content: center;
     text-align: center;
     font-size: 2rem;
+    padding: 10px;
 }
 footer#pageFooter nav ul li a
 {

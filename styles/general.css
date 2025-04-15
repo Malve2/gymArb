@@ -33,6 +33,10 @@ main
 {
     margin-top: 8vh;
     background-color: var(--secondary-bg-color);
+    box-shadow: 0px 0px 10px 5px rgba(0,0,0,0.5);
+    -webkit-box-shadow: 0px 0px 10px 5px rgba(0,0,0,0.5);
+    -moz-box-shadow: 0px 0px 5px 10px rgba(0,0,0,0.5);
+    border-radius: 10px;
 }
 ul
 {
@@ -50,13 +54,11 @@ section:has(h1#pageTitle)
 {
     width: 100%;
     background-color: var(--main-object-color);
-    /* box-shadow: 0px 20px 15px 0px rgba(0,0,0,0.75);
--webkit-box-shadow: 0px 20px 15px 0px rgba(0,0,0,0.75);
--moz-box-shadow: 0px 20px 15px 0px rgba(0,0,0,0.75); */
-
-    box-shadow: 0px -20px 15px 0px rgba(0,0,0,0.5) inset;
-    -webkit-box-shadow: 0px -20px 15px 0px rgba(0,0,0,0.5) inset;
-    -moz-box-shadow: 0px -20px 15px 0px rgba(0,0,0,0.5) inset;
+    box-shadow: 3px 3px 10px 1px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 3px 3px 10px 1px rgba(0,0,0,0.75);
+    -moz-box-shadow: 3px 3px 10px 1px rgba(0,0,0,0.75);
+    border: 2px solid black;
+    border-radius: 10px;
 }
 h1#pageTitle
 {

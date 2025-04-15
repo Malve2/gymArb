@@ -43,6 +43,7 @@ article.pokemon
     justify-content: center;
     flex-direction: column;
     margin-bottom: 5vh;
+    min-width: 12rem;
     width: 70%;
     border: solid  black 1px;
     border-radius: 10px;
@@ -95,6 +96,7 @@ section#pagination
     justify-content: space-around;
     align-items: center;
     width: 100%;
+    margin-bottom: 5vh;
 }
 section#pagination > *
 {
