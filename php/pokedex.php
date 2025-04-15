@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pokédex</title>
-    
+    <link rel="icon" type="image/svg" href="../images/Poké_Ball_icon.svg">
     <link rel="stylesheet" href="../styles/pokedexStyle.css">
     <script src="../scripts/pokedex.js" defer></script>
 </head>
@@ -15,12 +15,16 @@
     ?>
     <div class="wrapper">
         <main>
+            <section>
+                <h1 id="pageTitle">Pokédex!</h1>
+            </section>
             <section id="filters">
                 <input id="searchBar" name="searchBar" type="text" placeholder="Search for Pokémon!">
             </section>
 
             <section id="pokemonCardContainer"></section>
             <!-- <button id="nextButton">Next</button> -->
+            
             <section id="pagination">
                 <a id="loadMore">
                     Load more pokémon
@@ -32,6 +36,8 @@
                     <option value="100">100</option>
                 </select>
             </section>
+            <a id="toTop"href="#">ò</a>
+            
         </main>
     </div>
     

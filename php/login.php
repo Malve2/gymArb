@@ -10,22 +10,24 @@
     <?php
     require_once("header.php");
     ?>
-    <main>
-        <section id="titleSection">
-            <h1>Log In!</h1>
-            <h2></h2>
-        </section>
-        <section id="formSection">
-            <form id="loginForm" action="">
-                <label for="usernameInput">Username: </label>
-                <input type="text" name="username" placeholder="Username" id="usernameInput">
-                <label for="passwordInput">Password: </label>
-                <input type="password" name="password" placeholder="Password" id="passwordInput">
-                <input type="submit" value="Log In">
-            </form>
-        </section>
-        
-    </main>
+    <div class="wrapper">
+        <main>
+            <section>
+                <h1 id="pageTitle">Log In!</h1>
+            </section>
+            <section id="formSection">
+                <form id="loginForm" action="">
+                    <label for="usernameInput">Username: </label>
+                    <input type="text" name="username" placeholder="Username" id="usernameInput">
+                    <label for="passwordInput">Password: </label>
+                    <input type="password" name="password" placeholder="Password" id="passwordInput">
+                    <input type="submit" value="Log In">
+                </form>
+            </section>
+            
+        </main>
+    </div>
+   
     
     <?php
     require_once("footer.php");

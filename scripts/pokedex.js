@@ -174,6 +174,17 @@ function capitalizeFirstLetter(val) {
 }
 
 
+let toTop = document.getElementById("toTop");
+window.onscroll = function() {toTopButtonVisability()};
+toTopButtonVisability = () => {
+  if (document.body.scrollTop > 1000 || document.documentElement.scrollTop > 1000) {
+    toTop.style.display = 'block';
+  } else {
+    toTop.style.display = 'none';
+  }
+}
+
+
 
 
 const searchBar = document.getElementById("searchBar");

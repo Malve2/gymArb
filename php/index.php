@@ -11,9 +11,16 @@
 require_once("header.php");
 ?>
 
-<div>
-
+<div class="wrapper">
+<main>
+    <section>
+        <h1 id="pageTitle">
+            Home
+        </h1>
+    </section>
+</main>
 </div>
+
     <!-- <img src="../images/every-pokemon.jpg" alt="A lot of different pokémon."> -->
 
 <?php
