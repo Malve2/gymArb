@@ -1,4 +1,4 @@
-<link rel="icon" type="image/svg" href="../images/Poké_Ball_icon.svg">
+<link id="pageIcon" rel="icon" type="image/svg" href="../images/Poké_Ball_icon.svg">
 <link rel="stylesheet" href="../styles/general.css">
 <link rel="stylesheet" href="../styles/headerStyle.css">
 <script src="../scripts/hamburgerMenu.js" defer></script>

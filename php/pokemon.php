@@ -14,6 +14,11 @@
     ?>
     <div class="wrapper">
         <main>
+            <section>
+                <h1 id="pageTitle">
+                    Pokémon!
+                </h1>
+            </section>
             <section id="pagination">
                 <div id="previous">
                     <a>
@@ -26,12 +31,15 @@
                     </a>
                 </div>
             </section>
+            <a  id="linkBack" href="pokedex.php">Go Back</a>
             <section id="details">
                 <section>
                     <img id="profile" src="" alt="">
                 </section>
                 <section>
-                    
+                    <audio id="cry" loop autoplay controls src="">
+                        
+                    </audio>
                 </section>
             </section>
             <section id="evolutions">

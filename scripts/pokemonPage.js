@@ -2,13 +2,19 @@ const queryString = window.location.search;
 const urlParams = new URLSearchParams(queryString);
 const id = urlParams.get('id');
 
-apiUrl = "https://pokeapi.co/api/v2/pokemon/" + id;
+apiUrl = "https://pokeapi.co/api/v2/pokemon/";
 
 for(let i = -1; i < 2; i++)
 {
-    fetchPokemonData(apiUrl + (id + i));
+    if(i == 0)
+    {
+        continue;
+    }
+    console.log(apiUrl + (Number(id) + i))
+    fetchPokemonData(apiUrl + (Number(id) + i));
 }
-fetch(apiUrl,{
+
+fetch(apiUrl + id,{
     
     method:'GET',
     headers:{
@@ -29,6 +35,10 @@ function renderPokemon(pokemon)
     profileImage.src = pokemon["sprites"]["other"]["official-artwork"]["front_default"];
     profileImage.alt = "Picture of the pokémon " + name;
     document.title = name + "!";
+    document.getElementById("pageIcon").href = pokemon["sprites"]["other"]["dream_world"]["front_default"];
+    document.getElementById("pageTitle").innerHTML = name + "!";
+    document.getElementById("cry").src = pokemon["cries"]["latest"];
+
 
 
 
@@ -62,22 +72,15 @@ async function fetchPokemonData(apiUrl) {
 
       const data = await response.json();
       
-      // Fetch individual Pokémon details for each result
-      //console.log(data);
-      const pokemonPromises = data.results.map(async (pokemon) => {
-  
-        const pokemonData = await fetch(pokemon.url); // Fetch individual Pokémon details
-        const pokemonDetails = await pokemonData.json();
-        
-        return pokemonDetails; // Return the Pokémon details including id and sprite
-      });
-  
-      // Wait for all Pokémon data to be fetched
-      const allPokemonDetails = await Promise.all(pokemonPromises);
+
+      const id = data.id;
+      if (this.id < id)
+      {
+        document.getElementById("")
+      }
       
-      // Sort the Pokémon details by their id (number)
-      allPokemonDetails.sort((a, b) => a.id - b.id);
-      //console.log(allPokemonDetails);
+      // Fetch individual Pokémon details for each result
+    
   
 
   
