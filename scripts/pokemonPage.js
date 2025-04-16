@@ -29,7 +29,16 @@ fetch(apiUrl + id,{
 
 function renderPokemon(pokemon)
 {
-    const name = capitalizeFirstLetter(pokemon.name);
+  let name = capitalizeFirstLetter(pokemon.name);
+  if(pokemon.name.toLowerCase().includes("-m"))
+  {
+    name = capitalizeFirstLetter(pokemon.name).replace("-m", "-male");
+  }
+  else if(pokemon.name.toLowerCase().includes("-f"))
+  {
+    name = capitalizeFirstLetter(pokemon.name).replace("-f", "-female");
+  }
+    
     const id = pokemon.id;
     const profileImage = document.getElementById("profile");
     profileImage.src = pokemon["sprites"]["other"]["official-artwork"]["front_default"];
@@ -44,16 +53,7 @@ function renderPokemon(pokemon)
 
     //Stoppa in länkar till föregående och nästa pokemon, samt deras namn
     
-    let previousPokemonLink = document.querySelector("div#previous a");
-    previousPokemonLink.href = `pokemon.php?id=${id-1}`;
-
-    let nextPokemonLink = document.querySelector("div#next a");
-    nextPokemonLink.href = `pokemon.php?id=${id+1}`;
-
-    if(id === 1)
-    {
-        previousPokemonLink.remove();        
-    }
+    
 }
 
 function capitalizeFirstLetter(val) 
@@ -73,15 +73,41 @@ async function fetchPokemonData(apiUrl) {
       const data = await response.json();
       
 
-      const id = data.id;
-      if (this.id < id)
+      let previousPokemonLink = document.querySelector("div#previous a");
+      previousPokemonLink.href = `pokemon.php?id=${Number(id)-1}`;
+
+      let nextPokemonLink = document.querySelector("div#next a");
+      nextPokemonLink.href = `pokemon.php?id=${Number(id)+1}`;
+
+      let previousPokemonImage = document.querySelector("div#previous img");
+      let nextPokemonImage = document.querySelector("div#next img");
+
+      let name = capitalizeFirstLetter(data.name);
+      if(name.includes("-m"))
       {
-        document.getElementById("")
+        name = name.replace("-m", "-male");
+      }
+      else if(name.includes("-f"))
+      {
+        name = name.replace("-f", "-female");
+      }
+      if(id === 1)
+      {
+          previousPokemonLink.remove();        
       }
       
-      // Fetch individual Pokémon details for each result
-    
-  
+      if(data.id < Number(id))
+      {
+        previousPokemonImage.src = data["sprites"]["other"]["dream_world"]["front_default"];
+        previousPokemonLink.innerHTML += name;
+      }
+      else
+      {
+        nextPokemonImage.src = data["sprites"]["other"]["dream_world"]["front_default"];
+        nextPokemonLink.innerHTML += name;
+      }
+      
+
 
   
     }

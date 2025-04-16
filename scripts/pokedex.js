@@ -77,8 +77,17 @@ function renderPokemonCards(allPokemonDetails) {
   //detta för att skapa olika element för varje pokemon som kommer vara utformade på samma sätt
   allPokemonDetails.forEach(pokemonDetails => {
     const card = document.createElement("article");
-    const pokemonName = pokemonDetails.name;
+    let pokemonName = pokemonDetails.name;
     const entryNumber = pokemonDetails.id;
+
+    if(pokemonName.includes("-m"))
+      {
+        pokemonName = pokemonName.replace("-m", "-male");
+      }
+      else if(pokemonName.includes("-f"))
+      {
+        pokemonName = pokemonName.replace("-f", "-female");
+      }
 
 
     let types = new Array();

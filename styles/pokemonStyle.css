@@ -15,3 +15,22 @@ section#pagination a{
 section#pagination a:hover{
     background-color: var(--secondary-object-color);
 }
+section#pagination img
+{
+    height: 2em;
+    width: 2em;
+    display: none;
+    position: static;
+    top: 4vh;
+}
+section#pagination > div:hover img
+{
+    display: inline-block;
+}
+section#pagination > div
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+}

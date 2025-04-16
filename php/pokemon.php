@@ -22,13 +22,17 @@
             <section id="pagination">
                 <div id="previous">
                     <a>
-                        Previous Pokémon
+                        Previous pokémon: 
+                        
                     </a>
+                    <img src="" alt="Image of the previous pokémon">
                 </div>
                 <div id="next">
                     <a>
-                        Next Pokémon
+                        Next Pokémon: 
+                        
                     </a>
+                    <img src="" alt="Image of the next pokémon">
                 </div>
             </section>
             <a  id="linkBack" href="pokedex.php">Go Back</a>
@@ -37,7 +41,7 @@
                     <img id="profile" src="" alt="">
                 </section>
                 <section>
-                    <audio id="cry" loop autoplay controls src="">
+                    <audio id="cry" controls src="">
                         
                     </audio>
                 </section>
