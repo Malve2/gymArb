@@ -36,18 +36,19 @@
                 </div>
             </section>
             <a  id="linkBack" href="pokedex.php">Go Back</a>
-            <section id="details">
+            <section class="info" id="details">
                 <section>
                     <img id="profile" src="" alt="">
                 </section>
                 <section>
-                    <audio id="cry" controls src="">
+                    <audio id="cry" loop controls src="">
                         
                     </audio>
                 </section>
             </section>
-            <section id="evolutions">
-
+            <section class="info" id="evolutions">
+                <section>aoieghqegoi</section>
+                <search>OI#JQOIJGeqiogjq</search>
             </section>
             <section id="">
 

@@ -1,9 +1,15 @@
-section{
+/* section{
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 10px;
     margin-top: 10px;
+} */
+section#pagination
+{
+    display: flex;
+    flex-direction: row;
+
 }
 section#pagination a{
     background-color: var(--main-object-color);
@@ -20,12 +26,11 @@ section#pagination img
     height: 2em;
     width: 2em;
     display: none;
-    position: static;
-    top: 4vh;
+    position: relative;
 }
 section#pagination > div:hover img
 {
-    display: inline-block;
+    display: flex;
 }
 section#pagination > div
 {
@@ -33,4 +38,18 @@ section#pagination > div
     flex-direction: column;
     justify-content: center;
     
+}
+section.info
+{
+    display: flex;
+    flex-direction: column;
+}
+section#details > section
+{
+    width: 100%;
+}
+img#profile
+{
+    image-rendering: optimizeQuality;
+    width: 70%;
 }

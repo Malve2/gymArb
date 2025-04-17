@@ -37,6 +37,9 @@ main
     -webkit-box-shadow: 0px 0px 10px 5px rgba(0,0,0,0.5);
     -moz-box-shadow: 0px 0px 5px 10px rgba(0,0,0,0.5);
     border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 4vh;
 }
 ul
 {
