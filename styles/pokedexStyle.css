@@ -103,11 +103,23 @@ section#pagination > *
     background-color: var(--main-object-color);
     border-radius: 10px;
     padding: 10px;
-    border: solid black 1px;
+    border: solid black 2px;
     color: var(--main-link-color);
     font-family: pixel-regular;
+    font-weight: normal;
+    font-size: 1rem;
 }
-section#pagination a#loadMore:hover
+section#pagination select
+{
+    color: var(--main-link-color);
+    font-family: pixel-regular;
+    text-shadow: 2px 2px 2px rgb(0, 0, 0);
+}
+section#pagination select option
+{
+    font-family: pixel-regular;
+}
+section#pagination a#loadMore:hover, section#pagination select:hover
 {
     cursor: pointer;
     background-color: var(--secondary-object-color);

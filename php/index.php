@@ -3,7 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pokéteket</title>
+    <title>Pokétek</title>
+    <script src="../scripts/dailyPokemon.js" defer></script>
+    <link rel="stylesheet" href="../styles/index.css">
+    <link rel="stylesheet" href="../styles/pokedexStyle.css">
 </head>
 <body>
 
@@ -13,25 +16,27 @@ require_once("header.php");
 
 <div class="wrapper">
 <main>
-    <section>
-        <h1 id="pageTitle">
-            Home
-        </h1>
+    <h1 id="pageTitle">
+        Home
+    </h1>
+    <h2>Today's Pokémon!</h2>
+    <section id="dailyPokemonContainer">
+        
+            <div class="arrow left">
+                <div class="line"></div>
+                <div class="line"></div>
+            </div>
+        
+        <div id="dailyPokemon">
+
+        </div>
+  
+            <div class="arrow right">
+                <div class="line"></div>
+                <div class="line"></div>
+            </div>
     </section>
-    <section>
-        <article>
-            <h2>kajwh</h2>
-        </article>
-        <article>
-            <h2>kajwh</h2>
-        </article>
-        <article>
-            <h2>kajwh</h2>
-        </article>
-        <article>
-            <h2>kajwh</h2>
-        </article>
-    </section>
+    
 </main>
 </div>
 

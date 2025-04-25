@@ -7,12 +7,20 @@
     <div class="wrapper">
         <div id="menuContainer">
             <img loading="lazy" id="menuBars" src="../images/Poké_Ball_icon.svg" alt="Pokeball menu">
-            <a href="index.php">Pokéteket</a>            
+            
+            <a id="websiteBrand" href="index.php">Pokétek</a>  
+            <nav>
+                <ul>
+                    <li><a href="index.php">Home</a></li>
+                    <li><a href="login.php">Log In!</a></li>
+                    <li><a href="pokedex.php">Pokédex</a></li>
+                </ul>
+            </nav>          
         </div>
         <nav>
             <ul>
                 <li><a href="index.php">Home</a></li>
-                <li><a href="login.php">Log in!</a></li>
+                <li><a href="login.php">Log In!</a></li>
                 <li><a href="pokedex.php">Pokédex</a></li>
             </ul>
         </nav>

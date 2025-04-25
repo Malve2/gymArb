@@ -24,12 +24,41 @@ header#pageHeader div#menuContainer
     justify-content: space-around;
     align-items: center;
     height: 100%;
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 header#pageHeader div#menuContainer a
 {
     font-size: 2rem;
     font-weight: bold;
     text-shadow: 2px 2px 2px rgb(0, 0, 0);
+}
+header#pageHeader div#menuContainer a#websiteBrand
+{
+    font-size: 2.5rem;
+}
+header#pageHeader div#menuContainer nav
+{
+    width: 60%;
+    display: none;
+}
+header#pageHeader div#menuContainer nav ul
+{
+    display: none;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100%;
+}
+header#pageHeader div#menuContainer nav ul a
+{
+    display: inline-block;
+    padding: 10px;
+    background-color: var(--main-object-color);
+    border-radius: 5px;
+}
+header#pageHeader div#menuContainer nav ul a:hover
+{
+    background-color: var(--secondary-object-color);
 }
 header#pageHeader nav
 {
@@ -49,7 +78,7 @@ header#pageHeader img#menuBars:hover
     cursor: pointer;
     background-color: var(--secondary-bg-color);
 }
-header#pageHeader nav ul
+header#pageHeader div.wrapper > nav ul
 {
     display: none;
     position: relative;
@@ -57,13 +86,13 @@ header#pageHeader nav ul
     gap: 1vh;
     align-items: center;
 }
-header#pageHeader nav ul.visible
+header#pageHeader div.wrapper > nav ul.visible
 {
     display: flex;
     margin-top: 1vh;
     margin-bottom: 1vh;
 }
-header#pageHeader nav ul li a
+header#pageHeader div.wrapper > nav ul li a
 {
     padding: 10px;
     font-size: 2rem;
@@ -75,7 +104,7 @@ header#pageHeader nav ul li a
     border-radius: 5px;
     font-family:"Pixel-regular";
 }
-header#pageHeader nav ul li a:hover
+header#pageHeader div.wrapper > nav ul li a:hover
 {
     background-color: var(--secondary-object-color);
     transform: scale(1.1);
@@ -86,6 +115,18 @@ header#pageHeader nav ul li a:hover
     header#pageHeader div#menuContainer
     {
         justify-content: space-between;
+    }
+    header#pageHeader div#menuContainer nav ul
+    {
+        display: flex;
+    }
+    header#pageHeader img#menuBars
+    {
+        display: none;
+    }
+    header#pageHeader div#menuContainer nav
+    {
+        display: flex;
     }
    
 }

@@ -14,9 +14,7 @@
     ?>
     <div class="wrapper">
         <main>
-            <section>
-                <h1 id="pageTitle">Pokédex!</h1>
-            </section>
+            <h1 id="pageTitle">Pokédex!</h1>
             <section id="filters">
                 <input id="searchBar" name="searchBar" type="text" placeholder="Search for Pokémon!">
             </section>
@@ -26,9 +24,10 @@
             
             <section id="pagination">
                 <a id="loadMore">
-                    Load more pokémon
+                    Load More Pokémon
                 </a>
                 <select name="pokemonPerLoad" id="pokemonPerLoad" value="20">
+                    <option value="20" selected disabled>Pokemon Per Load</option>
                     <option value="20">20</option>
                     <option value="40">40</option>
                     <option value="60">60</option>

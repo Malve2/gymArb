@@ -1,6 +1,6 @@
 let bars = document.getElementById("menuBars");
 bars.addEventListener("click", toggleBars);
-let menu = document.querySelector("#pageHeader nav ul");
+let menu = document.querySelector("#pageHeader div.wrapper > nav ul");
 function toggleBars()
 {
     menu.classList.toggle("visible");

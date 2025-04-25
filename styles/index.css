@@ -1,0 +1,54 @@
+section#dailyPokemonContainer
+{
+    display: flex;
+    flex-direction: row;
+    overflow-x: hidden;
+    width: 100%;
+    max-width: 800px;
+    margin-top: 2vh;
+    padding-top: 2vh;
+    align-items: center;
+    border: 2px solid black;
+    background-color: var(--main-object-color);
+    border-radius: 20px;
+}
+
+div#dailyPokemon
+{
+
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+    transition: transform 0.3s ease-in-out;
+    will-change: transform;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -ms-overflow-style: none;  /* Internet Explorer 10+ */
+    scrollbar-width: 1px;  /* Firefox */
+}
+div#dailyPokemon::-webkit-scrollbar
+{
+    display: none; /* Hide scrollbar */
+}
+section#dailyPokemonContainer div.arrowContainer
+{
+    position: absolute;
+}
+div.arrow
+{
+    position: absolute;
+    border-radius: 10px;
+}
+div.arrow:hover
+{
+    cursor: pointer;
+    background-color: var(--secondary-object-color);
+}
+div.arrow.left
+{
+    transform: rotate(90deg);
+}
+div.arrow.right
+{
+    transform: rotate(-90deg);
+}

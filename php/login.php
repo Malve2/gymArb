@@ -12,9 +12,7 @@
     ?>
     <div class="wrapper">
         <main>
-            <section>
-                <h1 id="pageTitle">Log In!</h1>
-            </section>
+            <h1 id="pageTitle">Log In!</h1>
             <section id="formSection">
                 <form id="loginForm" action="">
                     <label for="usernameInput">Username: </label>
