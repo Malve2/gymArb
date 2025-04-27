@@ -52,17 +52,6 @@ function renderPokemonCards(allPokemonDetails) {
     let pokemonName = pokemonDetails.name;
     const entryNumber = pokemonDetails.id;
 
-
-    if(pokemonName.includes("-m"))
-      {
-        pokemonName = pokemonName.replace("-m", "-male");
-      }
-      else if(pokemonName.includes("-f"))
-      {
-        pokemonName = pokemonName.replace("-f", "-female");
-      }
-
-
     let types = new Array();
     pokemonDetails.types.forEach((typeList, index) =>
     {
@@ -88,7 +77,7 @@ function renderPokemonCards(allPokemonDetails) {
 
     //skapar p element (text)
     const entryText = document.createElement("p");
-    entryText.innerHTML = entryNumber;
+    entryText.innerHTML = `#${entryNumber}`;
 
     const cardHeader = document.createElement("header");
     cardHeader.appendChild(nameHeader)
@@ -118,7 +107,7 @@ function renderPokemonCards(allPokemonDetails) {
  
 let loadMoreButton = document.querySelector("a#loadMore");
 loadMoreButton.addEventListener("click", function() {
-    showPaginatedPokemons(); // <- just reveal more
+    showPaginatedPokemons();
   });
 
 

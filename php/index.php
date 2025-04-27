@@ -19,22 +19,11 @@ require_once("header.php");
     <h1 id="pageTitle">
         Home
     </h1>
-    <h2>Today's Pokémon!</h2>
+    
     <section id="dailyPokemonContainer">
-        
-            <div class="arrow left">
-                <div class="line"></div>
-                <div class="line"></div>
-            </div>
-        
+    <h2>Today's Pokémon!</h2>
         <div id="dailyPokemon">
-
         </div>
-  
-            <div class="arrow right">
-                <div class="line"></div>
-                <div class="line"></div>
-            </div>
     </section>
     
 </main>

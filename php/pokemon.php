@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Discover Pokémon details, evolutions, and sounds!">
     <title>Pokémon!</title>
+    <script src="../scripts/dropDown.js" defer></script>
     <script src="../scripts/pokemonPage.js" defer></script>
     <link rel="stylesheet" href="../styles/pokemonStyle.css">
 </head>
@@ -15,51 +16,109 @@
     ?>
     <div class="wrapper">
         <main>
-            <h1 id="pageTitle">
-                Pokémon
-                <span></span>
-            </h1>
-            <section id="pagination">
-                <div id="previous">
-                    <a>
-                        <img alt="Image of the previous pokémon">
-                    </a>
-                </div>
-                <div id="next">
-                    <a>
-                        <img alt="Image of the next pokémon">
-                    </a>
-                </div>
-            </section>
-            <a  id="linkBack" href="pokedex.php">Go Back</a>
+            
+            
+            
             <section class="info" id="details">
-                <section id="profileSection">
-                    <img id="profile" alt="">
-                </section>
-                <section>
-                    <section id="types">
-                        <h2>Types</h2>
-                        <div id="mainType"></div>
-                        <div id="secondaryType"></div>
+                
+                <h1 id="pageTitle">
+                    Pokémon
+
+                    <span></span>
+
+                </h1>    
+                <section id="profileTextSection">
+
+                    <section id="profileSection">
+
+                        <img id="profile" alt="">
+
                     </section>
-                    <div id="weaknesses"></div>
+
+                    <section id="flavorTextContainer">
+                        <h2>Description:</h2>
+                        <p></p>
+
+                        <select name="flavorText" id="flavorTextSelect">    
+                            <option selected disabled value="">Game Version</option>
+                        </select>
+
+                    </section>
+
                 </section>
+                
+                <!-- <audio id="cry" controls loop></audio> -->
             </section>
-            <h2>Evolutions</h2>
+
+            <section id="typeStatSection">
+
+                <section class="info" id="typeSection">
+
+                    <section class="types info">
+                        <h2>Type:</h2>
+                        <div>
+                            <div id="mainType"></div>
+                            <div id="secondaryType"></div>
+                        </div>     
+                    </section>
+
+                    <section class="types info">
+                        <h2>Weak To:</h2>
+                        <div id="weaknesses">
+                            
+                        </div>
+                    </section>
+
+                </section>
+            
+                <section class="info" id="statSection">
+                    <h2>Base Stats:</h2>
+                    <ul>
+
+                    </ul>
+                </section>
+
+            </section>
+            
+
+            <h2>Evolutions:</h2>
             <section class="info" id="evolutions">
-                <div id="firstEvolution"></div>
+                <div class="evolution" id="firstEvolution"></div>
                 <div class="arrow hidden">
                     <div class="line"></div>
                     <div class="line"></div>
                 </div>
-                <div id="secondEvolution" class="hidden"></div>
+                <div id="secondEvolution" class="evolution hidden"></div>
                 <div class="arrow hidden">
                     <div class="line"></div>
                     <div class="line"></div>
                 </div>
-                <div id="thirdEvolution" class="hidden"></div>
+                <div id="thirdEvolution" class="evolution hidden"></div>
             </section>
+
+            
             <section id="">
+            </section>
+
+            <a id="linkBack" href="pokedex.php">Back To Browsing</a>
+            <section class="pagination">
+                <a class="previousPokemon">
+                    <img alt="Image of the previous pokémon">
+                    <div>
+                        <h2></h2>
+                        <span>
+                        </span>
+                    </div>
+                    
+                </a>
+                <a class="nextPokemon">
+                    <div>
+                        <h2></h2>
+                        <span>
+                        </span>
+                    </div>
+                    <img alt="Image of the next pokémon">
+                </a>
             </section>
 
         </main>

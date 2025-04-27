@@ -20,8 +20,8 @@
             </section>
 
             <section id="pokemonCardContainer"></section>
-            <!-- <button id="nextButton">Next</button> -->
-            
+
+        
             <section id="pagination">
                 <a id="loadMore">
                     Load More Pokémon

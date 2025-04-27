@@ -19,6 +19,13 @@ a
     font-family: pixel-regular;
     text-shadow: 2px 2px 2px rgb(0, 0, 0);
 }
+p
+{
+    font-family: pixel-regular;
+    color: var(--main-link-color);
+    text-shadow: 2px 2px 2px rgb(0, 0, 0);
+    font-size: 18px;
+}
 body
 {
     display: flex;
@@ -33,7 +40,7 @@ body
 }
 main
 {
-    margin-top: 8vh;
+    margin-top: 120px;
     background-color: var(--secondary-bg-color);
     box-shadow: 0px 0px 10px 5px rgba(0,0,0,0.5);
     -webkit-box-shadow: 0px 0px 10px 5px rgba(0,0,0,0.5);
@@ -43,6 +50,7 @@ main
     flex-direction: column;
     align-items: center;
     gap: 4vh;
+    padding-bottom: 90px;
 }
 ul
 {
@@ -105,11 +113,28 @@ div.arrow
     flex-wrap: nowrap;
     background-color: none;
 }
-div.arrow div.line
+div.arrow.left
 {
-    height: 4px;
+    transform: rotate(90deg);
+}
+div.arrow.right
+{
+    transform: rotate(-90deg);
+}
+div.hamburger
+{
+    display: flex;
+    width: 60px;
+    height: 60px;
+    flex-direction: column;
+    justify-content: space-around;
+}
+div.line
+{
+    height: 6px;
     width: 100%;
     background-color: var(--main-link-color);
+    border: 1px solid black;
     position: relative;
 }
 div.arrow div.line:nth-child(odd)

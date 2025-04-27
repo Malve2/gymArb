@@ -124,43 +124,43 @@ function renderPokemonCards(allPokemonDetails) {
 }
 
 
-document.querySelectorAll(".arrow").forEach(arrow => {
-  arrow.addEventListener("click", () => {
-    const dir = arrow.classList.contains("left") ? -1 : 1;
-    scrollCarousel(dir);
-  });
-});
+// document.querySelectorAll(".arrow").forEach(arrow => {
+//   arrow.addEventListener("click", () => {
+//     const dir = arrow.classList.contains("left") ? -1 : 1;
+//     scrollCarousel(dir);
+//   });
+// });
 
-const carousel = document.getElementById('dailyPokemon');
+// const carousel = document.getElementById('dailyPokemon');
 
-carousel.addEventListener('wheel', (e) => {
-  e.preventDefault();
-  const direction = e.deltaY > 0 ? 1 : -1;
-  scrollCarousel(direction);
-}, { passive: false });
+// carousel.addEventListener('wheel', (e) => {
+//   e.preventDefault();
+//   const direction = e.deltaY > 0 ? 1 : -1;
+//   scrollCarousel(direction);
+// }, { passive: false });
 
-function scrollCarousel(direction) {
-  const carousel = document.getElementById('dailyPokemon');
-  const cards = carousel.querySelectorAll('.pokemon');
-  const cardWidth = cards[0]?.offsetWidth || 200;
-  const gap = 16;
-  const scrollAmount = (cardWidth + gap) * direction;
+// function scrollCarousel(direction) {
+//   const carousel = document.getElementById('dailyPokemon');
+//   const cards = carousel.querySelectorAll('.pokemon');
+//   const cardWidth = cards[0]?.offsetWidth || 200;
+//   const gap = 16;
+//   const scrollAmount = (cardWidth + gap) * direction;
 
-  const maxScrollLeft = carousel.scrollWidth - carousel.clientWidth;
+//   const maxScrollLeft = carousel.scrollWidth - carousel.clientWidth;
 
-  const isAtEnd = carousel.scrollLeft + scrollAmount > maxScrollLeft + (scrollAmount / 2);
-  const isAtStart = carousel.scrollLeft + scrollAmount < (scrollAmount / 2);
+//   const isAtEnd = carousel.scrollLeft + scrollAmount > maxScrollLeft + (scrollAmount / 2);
+//   const isAtStart = carousel.scrollLeft + scrollAmount < (scrollAmount / 2);
 
-  if (isAtEnd && direction === 1) {
-    // Loop to start
-    carousel.scrollTo({ left: 0, behavior: 'smooth' });
-  } else if (isAtStart && direction === -1) {
-    // Loop to end
-    carousel.scrollTo({ left: maxScrollLeft, behavior: 'smooth' });
-  } else {
-    carousel.scrollBy({ left: scrollAmount, behavior: 'smooth' });
-  }
-}
+//   if (isAtEnd && direction === 1) {
+//     // Loop to start
+//     carousel.scrollTo({ left: 0, behavior: 'smooth' });
+//   } else if (isAtStart && direction === -1) {
+//     // Loop to end
+//     carousel.scrollTo({ left: maxScrollLeft, behavior: 'smooth' });
+//   } else {
+//     carousel.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+//   }
+// }
 
 
 

@@ -1,7 +1,7 @@
 section#dailyPokemonContainer
 {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     overflow-x: hidden;
     width: 100%;
     max-width: 800px;
@@ -15,7 +15,6 @@ section#dailyPokemonContainer
 
 div#dailyPokemon
 {
-
     display: flex;
     flex-direction: row;
     gap: 16px;
@@ -23,14 +22,8 @@ div#dailyPokemon
     will-change: transform;
     overflow-x: auto;
     scroll-snap-type: x mandatory;
-    -ms-overflow-style: none;  /* Internet Explorer 10+ */
-    scrollbar-width: 1px;  /* Firefox */
 }
-div#dailyPokemon::-webkit-scrollbar
-{
-    display: none; /* Hide scrollbar */
-}
-section#dailyPokemonContainer div.arrowContainer
+/* section#dailyPokemonContainer div.arrowContainer
 {
     position: absolute;
 }
@@ -43,12 +36,4 @@ div.arrow:hover
 {
     cursor: pointer;
     background-color: var(--secondary-object-color);
-}
-div.arrow.left
-{
-    transform: rotate(90deg);
-}
-div.arrow.right
-{
-    transform: rotate(-90deg);
-}
+} */
