@@ -155,19 +155,10 @@ div.arrow div.line:nth-child(even)
 @font-face {
     font-family: 'pokemon-regular';
     src: url('../fonts/Pokemon\ Solid.ttf');
-    /* src: url('../fonts/providence-bold.eot?#iefix') format('embedded-opentype'),
-          url('../fonts/providence-bold.woff') format('woff'),
-          url('../fonts/providence-bold.ttf') format('truetype'),
-          url('../fonts/providence-bold.svg#providence-bold') format('svg'); */
-          font-weight: normal;
-          font-style: normal;
-        }
-
+}
 @font-face {
     font-family: 'Pixel-regular';
     src: url('../fonts/VCR_OSD_MONO_1.001.ttf');
-    font-weight: normal;
-    font-style: normal;
 }
 @font-face {
     font-family: 'Logo-circle';

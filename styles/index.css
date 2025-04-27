@@ -2,38 +2,79 @@ section#dailyPokemonContainer
 {
     display: flex;
     flex-direction: column;
-    overflow-x: hidden;
-    width: 100%;
     max-width: 800px;
-    margin-top: 2vh;
-    padding-top: 2vh;
+    padding: 20px;
     align-items: center;
     border: 2px solid black;
     background-color: var(--main-object-color);
     border-radius: 20px;
 }
 
-div#dailyPokemon
+section#welcomeSection
 {
     display: flex;
-    flex-direction: row;
-    gap: 16px;
-    transition: transform 0.3s ease-in-out;
-    will-change: transform;
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
+    flex-direction: column;
+    align-items: center;
+    width: 95%;
+    gap: 4vh;
 }
-/* section#dailyPokemonContainer div.arrowContainer
+section#welcomeSection > div
 {
-    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    border: 2px solid black;
+    border-radius: 20px;
+    text-align: center;
 }
-div.arrow
+section#welcomeSection > div:nth-child(2)
 {
-    position: absolute;
-    border-radius: 10px;
+    background-image: url("../images/every-pokemon.jpg");
+    position: relative;
+    gap: 20vh;
 }
-div.arrow:hover
+section#welcomeSection > div:nth-child(1)
 {
-    cursor: pointer;
+    background-color: var(--main-object-color);
+}
+section#welcomeSection > div h2
+{
+    background-color: var(--main-object-color);
+    width: 100%;
+    margin: 0;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    padding: 20px;
+}
+section#welcomeSection > div a
+{
+    background-color: var(--main-object-color);
+    width: 100%;
+    margin: 0;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    padding: 20px;
+}
+section#welcomeSection > div a:hover
+{
     background-color: var(--secondary-object-color);
-} */
+}
+section#welcomeSection > div p
+{
+    width: 80%;
+}
+
+@media screen and (min-width: 1024px)
+{
+    section#welcomeSection 
+    {
+        flex-direction: row;
+        justify-content: center;
+    }
+    section#welcomeSection > div
+    {
+        height: 100%;
+        width: 40%;
+    }
+}

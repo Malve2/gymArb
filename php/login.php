@@ -19,7 +19,7 @@
                     <input type="text" name="username" placeholder="Username" id="usernameInput">
                     <label for="passwordInput">Password: </label>
                     <input type="password" name="password" placeholder="Password" id="passwordInput">
-                    <input type="submit" value="Log In">
+                    <input type="submit" value="Log In!">
                 </form>
             </section>
             

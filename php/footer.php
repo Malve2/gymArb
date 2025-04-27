@@ -14,7 +14,6 @@
                     <li><a href="#">Stack overflow! <i class="logotypeCircle">l</i></a></li>
                     <li><a href="#">Facebook! <i class="logotypeCircle">E</i></a></li>
                     <li><a href="#">X! <i class="logotypeCircle">-</i></a></li>
-                    <li></li>
                 </ul>
             </nav>
         </section>

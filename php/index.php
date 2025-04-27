@@ -15,18 +15,28 @@ require_once("header.php");
 ?>
 
 <div class="wrapper">
-<main>
-    <h1 id="pageTitle">
-        Home
-    </h1>
+    <main>
+        <h1 id="pageTitle">
+            Home
+        </h1>
+
+        <section id="welcomeSection">
+        <div><h2>Pokémon!</h2><p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorum corporis sed veniam earum, soluta voluptas, eius veritatis corrupti odio molestias perspiciatis. Fugit explicabo assumenda quo dolor maiores perferendis impedit vel.</p></div>
+
+            <div>
+                <h2>Explore Pokédex!</h2>
+                <a href="pokedex.php">Click Here!</a>
+            </div>
+        </section>
+
     
-    <section id="dailyPokemonContainer">
-    <h2>Today's Pokémon!</h2>
-        <div id="dailyPokemon">
-        </div>
-    </section>
+        <section id="dailyPokemonContainer">
+        <h2>Today's Pokémon!</h2>
+            <div id="dailyPokemon">
+            </div>
+        </section>
     
-</main>
+    </main>
 </div>
 
     <!-- <img src="../images/every-pokemon.jpg" alt="A lot of different pokémon."> -->

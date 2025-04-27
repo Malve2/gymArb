@@ -95,30 +95,27 @@ async function renderPokemon(pokemon) {
 
 function renderTypes(type ,slot)
 {
-    let body;
+  let body;
   console.log(slot);
-    if(slot == 1)
-    {
-      body = document.getElementById("mainType");
-    }
-    else if (slot == 2)
-    {
-      let title = document.querySelector("section#typeSection section.types h2");
-      title.innerText = "Types:";
-      body = document.getElementById("secondaryType");
-    }
-    else
-    {
-      body = document.createElement("div");
-      document.getElementById("types").appendChild(body);
-    }
+  if(slot == 1)
+  {
+    body = document.getElementById("mainType");
+  }
+  else if (slot == 2)
+  {
+    let title = document.querySelector("section#typeSection section.types h2");
+    title.innerText = "Types:";
+    body = document.getElementById("secondaryType");
+  }
+  else
+  {
+   body = document.createElement("div");
+   document.getElementById("types").appendChild(body);
+  }
 
-    let image = document.createElement("img");
-    image.src = type.sprites["generation-viii"]["brilliant-diamond-and-shining-pearl"]["name_icon"];
-    body.appendChild(image);
-
-
-  
+  let image = document.createElement("img");
+  image.src = type.sprites["generation-viii"]["brilliant-diamond-and-shining-pearl"]["name_icon"];
+  body.appendChild(image);
 }
 
 

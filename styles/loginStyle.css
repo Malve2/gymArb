@@ -12,6 +12,8 @@ section#formSection
     display: flex;
     flex-direction: column;
     align-items: center;
+    border: 2px solid black;
+    border-radius: 20px;
 }
 #formSection form
 {
@@ -23,10 +25,26 @@ section#formSection
 {
     font-size: 1.3rem;
     font-weight: bold;
+    color: var(--main-link-color);
+    font-family: Pixel-regular;
+    text-shadow: 2px 2px 2px rgb(0, 0, 0);
 }
 #formSection form input
 {
     font-size: 1.25rem;
     padding: 10px;
-    border-radius: 500px;
+    border-radius: 10px;
+    border: 1px solid black;
+}
+#formSection form input[type = submit]
+{
+    color: var(--main-link-color);
+    font-family: Pixel-regular;
+    text-shadow: 2px 2px 2px rgb(0, 0, 0);
+    background-color: var(--main-object-color);
+}
+#formSection form input[type = submit]:hover
+{
+    background-color: var(--secondary-object-color);
+    cursor: pointer;
 }
