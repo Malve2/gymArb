@@ -28,15 +28,21 @@ section#welcomeSection > div
     border-radius: 20px;
     text-align: center;
 }
+section#welcomeSection > div img
+{
+    position: relative;
+    height: 200px;
+}
 section#welcomeSection > div:nth-child(2)
 {
-    background-image: url("../images/every-pokemon.jpg");
     position: relative;
-    gap: 20vh;
+    overflow-x: hidden;
+    max-height: 60vh;
 }
 section#welcomeSection > div:nth-child(1)
 {
     background-color: var(--main-object-color);
+    height: 100%;
 }
 section#welcomeSection > div h2
 {

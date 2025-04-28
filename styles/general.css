@@ -153,10 +153,6 @@ div.arrow div.line:nth-child(even)
 }
 
 @font-face {
-    font-family: 'pokemon-regular';
-    src: url('../fonts/Pokemon\ Solid.ttf');
-}
-@font-face {
     font-family: 'Pixel-regular';
     src: url('../fonts/VCR_OSD_MONO_1.001.ttf');
 }

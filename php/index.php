@@ -25,6 +25,7 @@ require_once("header.php");
 
             <div>
                 <h2>Explore Pokédex!</h2>
+                <img src="../images/every-pokemon.jpg" alt="">
                 <a href="pokedex.php">Click Here!</a>
             </div>
         </section>
